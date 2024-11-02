@@ -3,25 +3,126 @@
 
 <head>
   <meta charset="utf-8">
-  <title>WEB 2890 - Project 2</title>
+  <title>The Quilting Bee</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index,follow">
-  <meta name="description" content="TODO: Project 2 ...">
+  <meta name="description" content="The Quilting Bee">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="./stylesheets/main.scss">
 </head>
 
 <body>
-  <!-- Your HTML goes here -->
-  <h1 class="display-2 text-center my-5 py-5">
-    <span class="d-block py-5 mt-5">
-      <i class="bi bi-filetype-html text-primary"></i> / 
-      <i class="bi bi-filetype-css text-danger"></i> / 
-      <i class="bi bi-filetype-js text-success"></i>
-    </span>
-    
-    Project 2: A multiple-page project of your choosing.
-  </h1>
+  <nav class="navbar navbar-dark navbar-expand-lg nav-white">
+    <div class="container-fluid" id="navContain">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a href="index.html" id="logo">
+        <img src="images/QuiltingBeeWide.jpg" alt="Quilting Bee Logo">
+      </a>
+      <div class="collapse navbar-collapse"  id="navbarCollapse">
+        <ul class="navbar-nav">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="services_pricing.html">Services & Pricing</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="container-fluid">
+    <div class="row">
+      <div class="col-12 col-md-5" id="hero-intro">
+        <div id="hero-intro-words" class="mb-5 mb-md-0">
+          <h1 class="pb-4">We specialize in finishing your quilts</h1>
+          <a href="contact.html" class="button-regular">Contact Us</a>
+        </div>
+      </div>
+      <!-- Carousel -->
+      <div class="col-12 col-md-7" id="quiltCarousel">
+        <div id="featuredQuilts" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#featuredQuilts" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#featuredQuilts" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#featuredQuilts" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#featuredQuilts" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/stitches/meander.jpg" class="d-block" alt="Quilt with meander stitch">
+              <div class="carousel-caption d-md-block">
+                <h5>Meandering Stitch</h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/stitches/swirls.jpg" class="d-block" alt="Quilt with swirls stitch">
+              <div class="carousel-caption d-md-block">
+                <h5>Swirls Stitch</h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/stitches/swirl-flower.jpg" class="d-block" alt="Quilt with swirls and flowers stitch">
+              <div class="carousel-caption d-md-block">
+                <h5>Swirls and Flowers Stitch</h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/stitches/custom1.jpg" class="d-block" alt="Quilt with custom stitching">
+              <div class="carousel-caption d-md-block">
+                <h5>Custom Stitch</h5>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#featuredQuilts" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#featuredQuilts" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container my-container" id="home-main">
+    <h1 class="purple-heading mb-1">Quality Quilting</h1>
+    <p class="fs-3">We provide professional-quality quilting. Aleena is a certified machine quilter with 13 years of experience working with a variety of quilts.</p>
+    <a href="gallery.html" class="button-regular">See Our Work</a>
+  </main>
+
+  <footer class="container-fluid">
+    <div class="container text-sm-center">
+      <div class="mb-4 row">
+        <div class="col-lg-2 col-xxl-3">
+          <img src="images/QuiltingBeeWide.jpg" alt="Quilting Bee Logo" class="d-none d-lg-block" height="80px">
+        </div>
+        <div class="d-flex align-content-center justify-content-sm-center col-12 col-sm-6 col-lg-4 col-xxl-3 mb-2">
+          <i class="bi bi-telephone me-3"></i>
+          <a href="tel:+14352453978" class="footer-contact pt-2 fs-5">435-245-3978</a>
+        </div>
+        <div class="d-flex align-content-center justify-content-sm-center col-12 col-sm-6 col-lg-4 col-xxl-3">
+          <i class="bi bi-buildings me-3"></i>
+          <a href="http://maps.google.com/?q=110 E Main Street, Wellsville, UT 84339" target="_blank" class="footer-contact fs-5">110 E Main Street<br>Wellsville, UT 84339</a>
+        </div>
+        <div class="col-lg-2 col-xxl-3"></div>
+      </div>
+      <a href="privacy_policy.html" class="d-md-none fs-5">Privacy Policy</a>
+      <p class="fw-bold mt-3 fs-4">&copy; Copyright 2024 - The Quilting Bee in Wellsville</p>
+      <div class="row">
+        <a href="privacy_policy.html" class="d-none d-md-inline-block fs-5 col-md-3">Privacy Policy</a>
+        <p class="col-md-6">Website Design by <a href="" target="_blank">Avrey Semadeni</a></p>
+        <div class="col-md-3"></div>
+      </div>
+    </div>
+  </footer>
 
   <script type="module" src="./javascripts/main.js"></script>
 </body>
