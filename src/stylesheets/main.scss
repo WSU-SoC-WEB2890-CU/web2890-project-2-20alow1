@@ -2,7 +2,7 @@
 //Link Visited Hover Focus Active
 
 * {
-    font-family: 'Josefin Sans';
+    font-family: 'Noto Sans';
 }
 
 // My Colors
@@ -338,9 +338,9 @@ textarea {
     margin-top: 2rem;
     margin-bottom: 6rem;
     p {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
         a {
-            font-size: 1.7rem;
+            font-size: 1.5rem;
         }
     }
 }
@@ -355,11 +355,42 @@ textarea {
 
 
 
+// PRIVACY POLICY
+#privacy {
+    font-size: 1.3rem;
+    margin-bottom: 6rem;
+    ol, ul {
+        padding-left: 4rem;
+    }
+
+    .privacy-section {
+        margin-bottom: 3rem;
+    }
+}
+
+
+
+// SERVICES AND PRICING
+.service-section {
+    margin-bottom: 5rem;
+    h2 {
+        margin-bottom: 1.3rem;
+    }
+}
+
+.service-price {
+    background-color: $purple-lighter;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 2px solid $purple-dark;
+    border-radius: 10px;
+    font-weight: bold;
+}
 
 
 
 
-
+// GALLERY
 
 
 
@@ -458,12 +489,6 @@ textarea {
     #contact-contact {
         margin-top: 1.7rem;
         margin-bottom: 4rem;
-        p {
-            font-size: 1.5rem;
-            a {
-                font-size: 1.5rem;
-            }
-        }
     }
 
 }
