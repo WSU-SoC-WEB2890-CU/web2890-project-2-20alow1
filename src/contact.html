@@ -19,12 +19,12 @@
 <body>
   <nav class="navbar navbar-dark navbar-expand-lg">
     <div class="container-fluid" id="navContain">
+      <a href="index.html" id="logo" class="me-lg-3">
+        <img src="images/QuiltingBeeWide.jpg" alt="Quilting Bee Logo">
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a href="index.html" id="logo">
-        <img src="images/QuiltingBeeWide.jpg" alt="Quilting Bee Logo">
-      </a>
       <div class="collapse navbar-collapse"  id="navbarCollapse">
         <ul class="navbar-nav">
           <li><a href="index.html">Home</a></li>
@@ -42,7 +42,7 @@
   </div>
 
   <main class="container my-container mb-5" id="contact-page">
-    <div id="contact-contact" class="row justify-content-center">
+    <section id="contact-contact" class="row justify-content-center" aria-label="Contact Information">
       <div class="col-12 col-md-5 order-md-2">
         <p><b>Phone:</b> <a href="tel:+14352453978">435-245-3978</a></p>
         <p><b>Address:</b><br><a href="http://maps.google.com/?q=110 E Main Street, Wellsville, UT 84339" target="_blank">110 E Main Street<br>Wellsville, UT 84339</a></p>
@@ -50,51 +50,46 @@
       <div class="col-12 col-md-4 order-md-1">
         <img src="images/contact.jpg" alt="Phone and email" class="cover w-100">
       </div>
-    </div>
+    </section>
     <!-- It would be fun to have the bee holding a phone here instead -->
 
 <!-- In the future: figure out how/if I can change the default tooltip if not all fields are filled in or correct -->
-    <h2 class="mb-4">Send a message:</h2>
-    <form class="row">
-      <div class="col-12 col-lg-6">
-        <label for="Name">Name*</label>
-        <input type="text" name="Name" id="Name" placeholder="Name" required autocomplete="on">
-        <label for="Email">Email*</label>
-        <input type="text" name="Email" id="Email" placeholder="Email address" required autocomplete="on">
-      </div>
-      <div class="col-12 col-lg-6">
-        <label for="Message">Message*</label>
-        <textarea name="Message" id="Message" placeholder="Type your message here" required></textarea>
-      </div>
-      <div class="col-12 mt-3">
-        <input type="submit" value="Send Message" class="button-regular">
-      </div>
+    <section aria-label="Contact Form">
+      <h2 class="mb-4">Get in Touch:</h2>
+      <form class="row">
+        <div class="col-12 col-lg-6">
+          <label for="Name">Name*</label>
+          <input type="text" name="Name" id="Name" placeholder="Name" required autocomplete="on">
+          <label for="Email">Email*</label>
+          <input type="text" name="Email" id="Email" placeholder="Email address" required autocomplete="on">
+        </div>
+        <div class="col-12 col-lg-6">
+          <label for="Message">Message*</label>
+          <textarea name="Message" id="Message" placeholder="Type your message here" required></textarea>
+        </div>
+        <div class="col-12 col-sm-8 col-lg-5 col-xl-3 mt-3">
+          <input type="submit" value="Send Message" class="button-regular">
+        </div>
       </form>
+    </section>
   </main>
 
   <footer class="container-fluid">
-    <div class="container text-sm-center">
-      <div class="mb-4 row">
+    <div class="container text-center">
+      <div class="row footerMB">
         <div class="col-lg-2 col-xxl-3">
-          <img src="images/QuiltingBeeWide.jpg" alt="Quilting Bee Logo" class="d-none d-lg-block" height="80px">
         </div>
-        <div class="d-flex align-content-center justify-content-sm-center col-12 col-sm-6 col-lg-4 col-xxl-3 mb-2">
-          <i class="bi bi-telephone me-3"></i>
-          <a href="tel:+14352453978" class="footer-contact pt-2 fs-5">435-245-3978</a>
+        <div class="d-flex align-content-center justify-content-center col-12 col-sm-5 col-md-6 col-lg-4 col-xxl-3 mb-2">
+          <a href="tel:+14352453978" class="footer-contact pt-2 fs-5"><i class="bi bi-telephone me-3 footerAlign"></i><span class="footerAlign">435-245-3978</span></a>
         </div>
-        <div class="d-flex align-content-center justify-content-sm-center col-12 col-sm-6 col-lg-4 col-xxl-3">
-          <i class="bi bi-buildings me-3"></i>
-          <a href="http://maps.google.com/?q=110 E Main Street, Wellsville, UT 84339" target="_blank" class="footer-contact fs-5">110 E Main Street<br>Wellsville, UT 84339</a>
+        <div class="d-flex align-content-center justify-content-center col-12 col-sm-7 col-md-6 col-lg-4 col-xxl-3">
+          <a href="http://maps.google.com/?q=110 E Main Street, Wellsville, UT 84339" target="_blank" class="footer-contact fs-5"><i class="bi bi-buildings me-3"></i><span class="d-inline-block">110 E Main Street<br>Wellsville, UT 84339</span></a>
         </div>
         <div class="col-lg-2 col-xxl-3"></div>
       </div>
-      <a href="privacy_policy.html" class="d-md-none fs-5">Privacy Policy</a>
       <p class="fw-bold mt-3 fs-4">&copy; Copyright 2024 - The Quilting Bee in Wellsville</p>
-      <div class="row">
-        <a href="privacy_policy.html" class="d-none d-md-inline-block fs-5 col-md-3">Privacy Policy</a>
-        <p class="col-md-6">Website Design by <a href="" target="_blank">Avrey Semadeni</a></p>
-        <div class="col-md-3"></div>
-      </div>
+      <p>Website Design by <a href="https://avrey-semadeni.netlify.app/" target="_blank">Avrey Semadeni<i class="bi bi-box-arrow-up-right fs-5 ms-2"></i></a></p>
+      <a href="privacy_policy.html" class="fs-5">Privacy Policy</a>
     </div>
   </footer>
 
