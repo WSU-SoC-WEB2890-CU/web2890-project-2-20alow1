@@ -1,3 +1,660 @@
-/* Your styles go here */
-@import "bootstrap/scss/bootstrap.scss";
-@import "bootstrap-icons/font/bootstrap-icons.css";
+//Lord Vader Hates Fluffy Animals
+//Link Visited Hover Focus Active
+
+//Find a way to get the carousel buttons to be positioned on the bottom white transparent background
+
+* {
+    font-family: 'Noto Sans';
+}
+
+// My Colors
+$purple: #734190;
+$purple-dark: #460A67;
+$purple-light: #B798C7;
+$purple-lighter: #ebd9f4;
+$purple-lightest: mix($color1: white, $color2: $purple-lighter, $weight: 75);
+$honey: #FED23B;
+$honey-dark: #EFBB0B;
+$honey-light: #f5d97d;
+$honey-darker: #d6a600;
+$wax: #FDF5BF;
+$wax-dark: #F7EE7F;
+$yellow-pastel: #F8FA6B;
+
+$carousel-control-opacity: 1;
+$carousel-control-hover-opacity: 1;
+$carousel-indicator-active-bg: black;
+
+$accordion-bg: $purple-lightest;
+$accordion-button-bg: $purple-lighter;
+$accordion-button-active-bg: $purple;
+$accordion-button-active-color: white;
+$accordion-border-radius: 15px;
+$accordion-button-focus-box-shadow: 0 0 0 .25rem $purple-light;
+$accordion-button-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='black'><path fill-rule='evenodd' d='M8 0q-.264 0-.523.017l.064.998a7 7 0 0 1 .918 0l.064-.998A8 8 0 0 0 8 0M6.44.152q-.52.104-1.012.27l.321.948q.43-.147.884-.237L6.44.153zm4.132.271a8 8 0 0 0-1.011-.27l-.194.98q.453.09.884.237zm1.873.925a8 8 0 0 0-.906-.524l-.443.896q.413.205.793.459zM4.46.824q-.471.233-.905.524l.556.83a7 7 0 0 1 .793-.458zM2.725 1.985q-.394.346-.74.74l.752.66q.303-.345.648-.648zm11.29.74a8 8 0 0 0-.74-.74l-.66.752q.346.303.648.648zm1.161 1.735a8 8 0 0 0-.524-.905l-.83.556q.254.38.458.793l.896-.443zM1.348 3.555q-.292.433-.524.906l.896.443q.205-.413.459-.793zM.423 5.428a8 8 0 0 0-.27 1.011l.98.194q.09-.453.237-.884zM15.848 6.44a8 8 0 0 0-.27-1.012l-.948.321q.147.43.237.884zM.017 7.477a8 8 0 0 0 0 1.046l.998-.064a7 7 0 0 1 0-.918zM16 8a8 8 0 0 0-.017-.523l-.998.064a7 7 0 0 1 0 .918l.998.064A8 8 0 0 0 16 8M.152 9.56q.104.52.27 1.012l.948-.321a7 7 0 0 1-.237-.884l-.98.194zm15.425 1.012q.168-.493.27-1.011l-.98-.194q-.09.453-.237.884zM.824 11.54a8 8 0 0 0 .524.905l.83-.556a7 7 0 0 1-.458-.793zm13.828.905q.292-.434.524-.906l-.896-.443q-.205.413-.459.793zm-12.667.83q.346.394.74.74l.66-.752a7 7 0 0 1-.648-.648zm11.29.74q.394-.346.74-.74l-.752-.66q-.302.346-.648.648zm-1.735 1.161q.471-.233.905-.524l-.556-.83a7 7 0 0 1-.793.458zm-7.985-.524q.434.292.906.524l.443-.896a7 7 0 0 1-.793-.459zm1.873.925q.493.168 1.011.27l.194-.98a7 7 0 0 1-.884-.237zm4.132.271a8 8 0 0 0 1.012-.27l-.321-.948a7 7 0 0 1-.884.237l.194.98zm-2.083.135a8 8 0 0 0 1.046 0l-.064-.998a7 7 0 0 1-.918 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z'/></svg>");
+$accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'><path fill-rule='evenodd' d='M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1z'/></svg>");
+$accordion-icon-width: 2rem;
+$accordion-border-width: 0;
+$accordion-border-color: $purple;
+
+
+// Required
+@import "../../node_modules/bootstrap/scss/functions";
+
+// Default Bootstrap variable overrides
+$navbar-dark-color: white;
+$navbar-dark-toggler-border-color: none;
+
+
+// Required
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/root";
+
+
+// Optional Bootstrap components here
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/type";
+@import "../../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+// My Other Styles
+
+h1, h2, h3 {
+    font-family: 'Aref Ruqaa';
+    font-weight: 700;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+h2 > button {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+a:hover {
+    text-decoration: underline dashed;
+}
+
+.my-container {
+    padding: 0 25px 0 25px;
+}
+
+.cover {
+    object-fit: cover;
+}
+
+.purple-heading {
+    font-size: 2.5rem;
+    color: $purple-dark;
+    margin-bottom: 2rem;
+    border-bottom: 4px solid $purple-light;
+    display: inline-block;
+    padding-bottom: 1.5rem;
+}
+
+
+// NAVBAR
+#navContain {
+    padding: 0;
+}
+
+.nav-white {
+    box-shadow: 0px 3px 15px rgba($color: white, $alpha: .5);
+
+}
+
+nav {
+    background-color: $purple-dark;
+    box-shadow: 0px 3px 15px rgba($color: $purple, $alpha: .5);
+    div {
+        ul {
+            list-style-type: none;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            li {
+                width: 100%;
+                &:active {
+                    color: black;
+                }
+                a {
+                    font-size: 1.2rem;
+                    display: flex;
+                    width: 100vw;
+                    height: 96px;
+                    text-decoration: none;
+                    color: white;
+                    align-items: center;
+                    justify-content: center;
+
+                    
+                    // My first styling
+                    // &:hover {
+                    //     background-color: $purple-lighter;
+                    //     color: black;
+                    //     border-bottom: 4px solid $purple-dark;
+                    //     text-decoration: none;
+                    // }
+                    &:hover {
+                        text-decoration: underline dashed $purple-lighter 4px;
+                        text-underline-offset: 10px;
+                        color: white;
+                    }
+                    &:focus-visible {
+                        outline: 3px solid $purple-lighter;
+                    }
+                    &:active {
+                        // color: black; My first styling
+                        color: white;
+                        text-decoration: underline solid $purple-lighter 4px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.navbar {
+    padding: 0;
+}
+
+.navbar-toggler {  
+    &:focus {
+      // The box-shadow overrides the default outline around the navbar toggler when clicked on
+      box-shadow: none;
+      border: 1px solid white;
+    }
+    margin-right: .7rem;
+    margin-left: .7rem;
+  }
+  
+.navbar-toggler-icon {
+    width: 2em;
+    height: 2em;
+  }
+
+  #logo {
+    // background-color: white;
+    // padding: .5rem .7rem;
+    padding: .5rem;
+    img {
+    height: 80px;
+    border-radius: 10px;
+    }
+  }
+
+  a[aria-current="page"] {
+    text-decoration: underline dashed $purple-lighter 4px;
+    text-underline-offset: 10px;
+    color: white;
+  }
+
+
+
+
+
+
+// HERO
+#hero-intro {
+    background-image: url(../images/header_back.jpg);
+    background-color: rgb(124, 124, 124);
+    background-blend-mode: screen;
+    background-repeat: no-repeat;
+    height: 100%;
+    background-size: cover;
+    // .button-regular {
+    //     border: 2px dashed $honey-darker;
+    //     &:hover {
+    //         box-shadow: none;
+    //         border: 2px solid black;
+    //     }
+    // }
+}
+
+#hero-intro-words {
+    // height: calc(80vh - 96px);
+    padding: 2rem 3rem;
+    text-align: center;
+    color: black;
+    p {
+        font-size: 2rem;
+        line-height: 50px;
+        margin-bottom: 1.4rem;
+        font-family: 'Aref Ruqaa';
+        font-weight: 700;
+        // text-shadow: 1px 1px 2px black;
+    }
+}
+
+.button-regular {
+    text-decoration: none;
+    color: black;
+    background-color: $honey;
+    padding: 1rem 2.3rem;
+    border-radius: 7px;
+    border: 2px dashed black;
+    // box-shadow: 1px 1px 2px black;
+    font-size: 1.3rem;
+    &:hover {
+        background-color: $honey-darker;
+        color: black;
+        transition: all .2s ease;
+        text-decoration: none;
+        box-shadow: none;
+        border: 2px solid black;
+    }
+    &:active {
+        background-color: white;
+        border: 2px solid $honey-darker;
+        transition: none;
+    }
+}
+
+
+// CAROUSEL
+#quiltCarousel {
+    padding: 0;
+}
+
+.carousel-item {
+    img {
+    width: 100%;
+    object-fit: cover;
+    height: 440px;
+    max-height: calc(100vh - 50px);
+    }
+}
+
+.carousel-control-next {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0,0,0,.6));
+    &:hover {
+        background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0,0,0,.8));
+    }
+}
+
+.carousel-control-prev {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0,0,0,.6));
+    &:hover {
+        background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0,0,0,.8));
+    }
+}
+
+.carousel-caption {
+    // background-color: rgba($color: white, $alpha: .7);
+    // width: 100%;
+    // padding-bottom: 2rem;
+    // left: 0;
+    // bottom: 0;
+    z-index: 3;
+    p {
+        font-size: 1.6rem;
+        font-weight: bolder;
+        color: black;
+    }
+}
+
+#carouselCaptionWhite {
+    background-color: rgba($color: white, $alpha: .7);
+    width: 100%;
+    height: 110px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.carousel .carousel-indicators button {
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+}
+
+.carousel-indicators {
+    z-index: 4;
+}
+
+
+//HOME CONTENT
+#home-main {
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+    text-align: center;
+    p {
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+    }
+}
+
+
+
+//FOOTER
+footer {
+    background-color: $purple-dark;
+    color: white;
+    padding: 2rem 0 1rem 0;
+
+    // .footer-contact {
+    //     color: $wax;
+    //     &:visited {
+    //         color: $wax;
+    //     }
+    // }
+
+    a {
+        color: $wax;
+        &:visited {
+            color: $wax;
+        }
+        &:hover {
+            color: $honey;
+        }
+        &:hover i{
+            color: $honey;
+        }
+    }
+
+    i {
+        font-size: 3rem;
+        color: $wax;
+    }
+    
+    img {
+        border-radius: 10px;
+    }
+}
+
+.footer-contact {
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+    &:hover span {
+        text-decoration: underline dashed;
+    }
+    span {
+        text-decoration: underline;
+    }
+}
+
+.footerAlign {
+    vertical-align: middle;
+}
+
+.footerMB {
+    margin-bottom: 3.5rem;
+}
+
+
+//ABOUT
+#about {
+    h1 {
+        text-align: center;
+    }
+
+    img {
+        border-radius: 10px;
+    }
+}
+
+.about-section {
+    margin-bottom: 4rem;
+}
+
+#about-list {
+    padding-left: 48px;
+    font-size: 1.3rem;
+}
+
+
+
+
+// CONTACT 
+label {
+    font-size: 1.3rem;
+    display: block;
+    font-weight: bold;
+}
+
+input, textarea {
+    margin-bottom: 1.5rem;
+    width: 100%;
+    padding: .8rem 1rem;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: $purple;
+    background-color: $purple-lightest;
+    &:focus {
+        outline-color: $purple;
+        background-color: mix($color1: white, $color2: $purple-lighter, $weight: 25);
+    }
+}
+
+textarea {
+    height: 200px;
+}
+
+#contact-contact {
+    margin-top: 2rem;
+    margin-bottom: 6rem;
+    p {
+        font-size: 1.3rem;
+        a {
+            font-size: 1.3rem;
+        }
+    }
+}
+
+#contact-page {
+    img {
+        border-radius: 10px;
+        margin-top: 2rem;
+    }
+}
+
+
+
+
+// PRIVACY POLICY
+#privacy {
+    font-size: 1.3rem;
+    margin-bottom: 6rem;
+    ol, ul {
+        padding-left: 4rem;
+    }
+
+    .privacy-section {
+        margin-bottom: 3rem;
+    }
+}
+
+
+
+// SERVICES AND PRICING
+// .service-section {
+//     margin-bottom: 5rem;
+//     h2 {
+//         margin-bottom: 1.3rem;
+//     }
+// }
+
+// .service-price {
+//     background-color: $purple-lighter;
+//     padding: 1rem;
+//     margin-bottom: 1rem;
+//     border: 2px solid $purple-dark;
+//     border-radius: 10px;
+//     font-weight: bold;
+// }
+
+.accordion-button {
+    font-size: 2rem;
+    font-weight: 700;
+    border: 5px solid $purple;
+    border-radius: 15px;
+    padding-bottom: 1.25rem;
+    &:not(.collapsed) {
+        border-radius: 10px 10px 0 0;
+        box-shadow: none;
+        &:focus {
+            border-color: $purple-light;
+        }
+    }
+    &:focus {
+        border-color: $purple-dark;
+    }
+}
+
+#accordionServices {
+    p {
+        margin-top: 1rem;
+    }
+}
+
+.accordion-item {
+    margin-bottom: 1rem;
+    border-radius: 15px;
+    &:not(:first-of-type) {
+        border-radius: 15px;
+    }
+}
+
+.accordion-body {
+    border: 5px solid $purple;
+    border-radius: 0 0 15px 15px;
+}
+
+
+
+
+
+
+
+// GALLERY
+#gallery {
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+        scale: 1;
+        // border: 12px outset $purple-dark;
+        // &:hover {
+        //     opacity: .5;
+        //     cursor: pointer;
+        //     scale: 1.05;
+        //     transition: all 0.1s ease-out;
+        // }
+    }
+}
+
+
+
+
+
+
+
+// Breakpoints
+
+  // Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    #logo {
+        // padding: .5rem 1rem;
+        padding: .5rem;
+    }
+
+    #hero-intro-words {
+        p {
+            line-height: 1.4;
+            font-size: 2.3rem;
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    .carousel-item {
+        img {
+        height: 500px;
+        }
+    }
+
+    #about {
+        h1 {
+            text-align: left;
+        }
+    }
+
+    #contact-page {
+        img {
+            margin-top: 0;
+            width: 100%;
+        }
+         h1 {
+            margin: auto;
+         }
+    }
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    nav {
+        div {
+            ul {
+                :nth-child(2) {
+                    a {
+                        width: 12rem;
+                    }
+                }
+                li {
+                    a {
+                        width: 7rem;
+                        height: 50px; // Second nav styling
+                    }
+                }
+            }
+        }
+    }
+
+    #hero-intro-words {
+        p {
+            line-height: 1.4;
+        }
+    }
+
+    .carousel-item {
+        img {
+        height: 700px;
+        }
+    }
+
+    #contact-page {        
+        textarea {
+            height: 163px;
+        }
+    }
+
+    #contact-contact {
+        margin-top: 1.7rem;
+        margin-bottom: 4rem;
+    }
+
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+
+}
